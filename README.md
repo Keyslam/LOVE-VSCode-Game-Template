@@ -56,5 +56,50 @@ Alternatively, you can run `lovec game` in the terminal.
 └── Root                Root access to the workspace
 ```
 
-### Appendix: Why isn't Pixelbyte Studio's "Love2D support" extension included?
+### Appendix A: Why isn't Pixelbyte Studio's "Love2D support" extension included?
 Pixelbyte Studio's "Love2D support" extension is commonly used by beginners because it is the first result that shows up when you search for LÖVE extensions in VSCode. However, it doesn't add any features you can't get with a well configured VSCode workspace. It also doesn't work with Local Lua Debugger and gives conflicting Intellisense results with the Lua Language Server.
+
+### Appendix B: Setting up a minimal project yourself.
+Sometimes you don't want a full blown template and just get the minimum required settings to get your editor working. The following steps will explain how to setup a project with the Sumneko Language Server and a launch task:
+
+1. Create a folder for your game with your `main.lua` and `conf.lua`.
+
+2. Open the folder with VSCode. 
+
+3. Install the [Sumneko Lua Language Server](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension.
+
+4. In the same folder as your `main.lua`, create a folder named `.vscode`
+
+5. In the `.vscode` folder, create a file named `settings.json` and copy the following contents into it:
+```
+{
+	"Lua.workspace.library": [
+		"${3rd}/love2d/library",
+		"lib"
+	],
+	"Lua.runtime.version": "LuaJIT",
+	"Lua.workspace.checkThirdParty": false,
+}
+```
+
+6. In the `.vscode` folder, create a file named `launch.sjon` and copy the following contents into it:
+```
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lua-local",
+			"request": "launch",
+			"name": "Release",
+			"program": {
+				"command": "love"
+			},
+			"args": [
+				".",
+			],
+		},
+	]
+}
+```
+
+
