@@ -52,3 +52,5 @@ Alternatively, you can run `lovec game` in the terminal.
 │
 └── Root                Root access to the workspace
 ```
+
+### Appendix: 
