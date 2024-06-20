@@ -24,7 +24,8 @@ LÖVE and Makelove should be in your PATH environment variable.
 2 - Open the `Workspace.code-workspace` file with Visual Studio Code.
 You will be prompted that there are recommended extensions and if you want to install these. Click 'Install'.
 
-3 - Configure the `Game/conf.lua` and `Tools/build/makelove.toml` with the settings specific for your game.
+3 - Configure the `Game/conf.lua` and `Tools/build/makelove.toml` with the settings specific for your game.\
+**NOTE**: Make sure to keep `t.console` set to `false` in `love.confg`. Local Lua Debugger will not work otherwise.
 
 4 - Configure the `Root/.editorconfig` to your liking for code styles.
 
@@ -34,6 +35,8 @@ You will be prompted that there are recommended extensions and if you want to in
 Press `F5` to launch the game in 'Debug mode'. In debug mode you can use breakpoints and inspect variables. This does have some performance impact though.\
 You can switch to 'Release mode' in the 'Run and Debug' tab (`Ctrl+Shift+D`).\
 Alternatively, you can run `lovec game` in the terminal.
+
+
 
 ## Structure
 ```
@@ -53,4 +56,5 @@ Alternatively, you can run `lovec game` in the terminal.
 └── Root                Root access to the workspace
 ```
 
-### Appendix: 
+### Appendix: Why isn't Pixelbyte Studio's "Love2D support" extension included?
+Pixelbyte Studio's "Love2D support" extension is commonly used by beginners because it is the first result that shows up when you search for LÖVE extensions in VSCode. However, it doesn't add any features you can't get with a well configured VSCode workspace. It also doesn't work with Local Lua Debugger and gives conflicting Intellisense results with the Lua Language Server.
