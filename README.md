@@ -66,7 +66,7 @@ Sometimes you don't want a full blown template and just get the minimum required
 
 2. Open the folder with VSCode. 
 
-3. Install the [Sumneko Lua Language Server](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension.
+3. Install the [Sumneko Lua Language Server](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) and [Local Lua Debugger](https://marketplace.visualstudio.com/items?itemName=tomblind.local-lua-debugger-vscode) extensions.
 
 4. In the same folder as your `main.lua`, create a folder named `.vscode`
 
@@ -82,7 +82,7 @@ Sometimes you don't want a full blown template and just get the minimum required
 }
 ```
 
-6. In the `.vscode` folder, create a file named `launch.sjon` and copy the following contents into it:
+6. In the `.vscode` folder, create a file named `launch.json` and copy the following contents into it:
 ```
 {
 	"version": "0.2.0",
@@ -102,4 +102,4 @@ Sometimes you don't want a full blown template and just get the minimum required
 }
 ```
 
-
+You can use this template as a basis for how to add additional features such as debugging, code styles, folder structures, automatic builds, et cetera.
