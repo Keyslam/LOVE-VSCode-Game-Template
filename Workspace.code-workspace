@@ -2,7 +2,7 @@
 	"folders": [
 		{
 			"name": "Game",
-			"path": "./Game",
+			"path": "./game",
 		},
 		{
 			"name": "Tools",
