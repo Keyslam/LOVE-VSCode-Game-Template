@@ -27,7 +27,7 @@ You will be prompted that there are recommended extensions and if you want to in
 If this does not happen, install [Sumneko's Lua extension](https://marketplace.visualstudio.com/items?itemName=sumneko.lua), [Local Lua Debugger](https://marketplace.visualstudio.com/items?itemName=tomblind.local-lua-debugger-vscode) and [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) manually.
 
 3 - Configure the `Game/conf.lua` and `Tools/build/makelove.toml` with the settings specific for your game.\
-**NOTE**: Make sure to keep `t.console` set to `false` in `love.confg`. Local Lua Debugger will not work otherwise.
+**NOTE**: Make sure to keep `t.console` set to `false` in `love.conf`. Local Lua Debugger will not work otherwise.
 
 4 - Configure the `Root/.editorconfig` to your liking for code styles.
 
